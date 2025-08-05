@@ -1,0 +1,107 @@
+Pick Starter
+Use Golden Machine
+Send Trade Invite
+Remove Trade Pet
+Add Trade Pet
+Change Trade Diamonds
+Cancel Trade
+Unready Trade
+Ready Trade
+Send Trade Message
+Trade Recieved
+Get Trade
+Get Invites Open
+Rename Pet
+Unequip Pet
+Equip Pet
+Lock Pet
+Equip Best Pets
+Unequip All Pets
+Delete Several Pets
+Open Gift
+Buy Upgrade
+Get OSTime
+Attempt Buy 15 Pets Equipped
+Attempt Buy Octuple Eggs
+Get Login Time
+Claim Reward
+Force Teleport
+Buy Teleport Area
+Toggle Hardcore Mode
+Fuse Pets
+Use Rainbow Machine
+Enchant Pet
+Redeem Pet Collection
+Buy Merchant Item
+Get Merchant Timer
+Get Merchant Items
+Verify Twitter
+Redeem Twitter Code
+Convert To Dark Matter
+Redeem Dark Matter Pet
+Prompt Dark Matter Skip
+Equip Hoverboard
+Get Bank OSTime
+Bank Deposit
+Bank Withdraw
+Upgrade Bank
+Prompt Upgrade Bank
+Leave Bank
+Buy Bank
+Cancel Bank Outgoing Invites
+Decline Bank Invite
+Accept Bank Invite
+Invite To Bank
+Kick From Bank
+Get Bank
+Get My Banks
+Get Bank Invites
+FFlags Commit
+Get Mail
+Send Mail
+Reject Mail
+Claim Mail
+Claim All Mail
+Get Mail
+Update Mail Settings
+Get Booth By Id
+Remove Trading Booth Pet
+Purchase Trading Booth Pet
+Unclaim Trading Booth
+Get All Booths
+Attempt Buy Trading Booth Style
+Purchase Trading Booth Style
+Redeem Free Gift
+Add Trading Booth Pet
+Change Booth Style
+Purchase Booth Style
+Rate Trade
+Get Local Leaderboard
+Get Global Leaderboard
+Get Update Countdown Details
+Get Like Goal
+Request Cannon Launch
+Buy Egg
+Get Coin Targets
+Join Coin
+Leave Coin
+Get Coins
+Redeem VIP Rewards
+Finish Hacker Portal Quest
+Buy Area
+Offer Shiny Relic
+Get Merchant Timer
+Is Merchant Here 
+Buy Dominus Gate
+Teleport To Player
+Buy Hacker Gate
+FireworkLauncher_GetPlayersEquipped
+Get Pet Positions
+Toggle Hardcore Mode
+Travel To Main World
+Travel to Trading Plaza
+Buy Trading Plaza
+Give Purple Hoverboard
+Give High Tech Hoverboard
+Get BIG Admin Commands
+Check Opening Status

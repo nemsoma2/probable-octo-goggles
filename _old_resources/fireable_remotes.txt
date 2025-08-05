@@ -1,0 +1,109 @@
+Gamepass Bought
+Product Bought
+Product Failed
+Process Pending Start
+Process Pending Stop
+Trade Processed
+Init Trade
+Trade Recieved
+Accept Trade Invite
+Cancel Trade
+Trade Cancelled
+Trade Ignored
+Trade Errored
+Update Trade Invites Open
+Trade Sent Chat Result
+Update Trade
+Clear Inventory Notifications
+Coin Bonus
+Activate Boost
+Achievement Completed
+Activate Server Boost
+Server Boost Update
+Server Boost Activated
+Server Boost Ended
+Notification
+Sent Progress Notification
+Upgrade Bought
+Toggle Setting
+Rank Changed
+Read Changelog
+Toggle Auto Delete
+Toggle Auto Hatch Setting
+Toggle Always Keep Setting
+Merchant Departed
+Merchant Arrival
+Merchant Updated
+Dark Matter Timer Skipped
+Mastery Leveled Up
+Boost Activated
+Boost Ended
+Notify Rewards
+Open Clipboard Popup
+Open FFlags
+Inbox Updated
+Outbox Updated
+Trade Booth Updated
+Trading Booth Unclaimed
+Trading Booth Claimed
+Trading Booth Particle
+NFTNotification
+Start Event Countdown
+Cannon Fire
+Cannon Fired
+Collect Lootbag
+Spawn Lootbag
+Remove Lootbag
+Change Pet Target
+Farm Coin
+Pet Target Coin
+Pet Target Player
+Player Teleported
+Set Riding Pet
+Select Coin
+Update Hoverboard State
+Open Egg
+Start Hacker Portal Quests
+Hacker Portal Unlocked
+Play Fireworks
+Start Dance Party Fireworks
+Fireworks Animation
+Performed Teleport
+Merchant Departed
+Merchant Arrival
+Update Coin Pets
+Update Coin Health
+Update Coin Special Bonus
+Remove Coin
+Damage Coin
+Finished Tutorial
+Claim Orbs
+Orb Added
+Orb Removed
+FireworkLauncher_FireProjectile
+FireworkLauncher_Equip
+FireworkLauncher_OtherPlayerFiredProjectile
+FireworkLauncher_Unequip
+FireworkLauncher_HackyEquip
+Force Load World
+Attempt Restore Booth
+Send Message
+Inventory Slots Given
+Merchant Departed
+Merchant Arrival
+Hoverboard Unlocked
+Advanced Christmas Event
+Play Grinch Sound
+Rewards Redeemed
+Pet Positions
+Enchanted Pets
+Dark Matter Machine Used
+Dark Matter Machine Redeemed
+Using Fuse Pets Machine
+Using Rainbow Machine
+Spooky Upgrade Animation
+Upgrade Station Animation
+Using Golden Machine
+Admin Cmds Notification
+Start Shutdown
+Send Position
