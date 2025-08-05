@@ -3,6 +3,8 @@
 -- TODO: make sure to add sanity checks here
 
 
+--local wrapper = loadstring(game:HttpGet("https://raw.githubusercontent.com/nemsoma2/probable-octo-goggles/refs/heads/main/wrapper.lua"))()
+
 local psx_library = require(game.ReplicatedStorage:WaitForChild('Framework'):WaitForChild('Library'))
 if (psx_library) then
 	print("psx library found")
@@ -19,3 +21,4 @@ for i,v in pairs(psx_library.Save.Get().Pets) do
 		print(x,y);
 	end
 end
+
